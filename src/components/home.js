@@ -18,7 +18,7 @@ const Home = () => {
     onViewportEnter: () =>
       setAminacion({ transform: "translate(0px, 0px)", opacity: 1 }),
     onViewportLeave: () =>
-      setAminacion({ transform: "translate(0px, -300px)", opacity: 0 }),
+      setAminacion({ transform: "translate(0px, -200px)", opacity: 0 }),
     transition: { type: "spring", duration: 1.5, bounce: 0 },
   };
 
