@@ -24,12 +24,12 @@ const Home = () => {
 
   return (
     <>
-      <motion.section {...animation} className="home">
-        <div className="dere"></div>
-        <div className="izqui">
+      <section  className="home">
+        <motion.div {...animation}  className="dere"></motion.div>
+        <motion.div {...animation} className="izqui">
           <div className="logoHome"></div>
-        </div>
-      </motion.section>
+        </motion.div>
+      </section>
     </>
   );
 };
