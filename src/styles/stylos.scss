@@ -6,30 +6,42 @@ $base-color: #C22428;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    // scroll-behavior: smooth;
 }
 
 body {
-    background-color: #ffffff;
-   
+    background-color: #00fc22;
+    // overflow-y: hidden;
     // transform: translate(3px, -15px);
 }
 
+body::-webkit-scrollbar {
+    background: #fff;
+    // border-radius: 4px;
+    width: 0;
+}
 
-// ::-webkit-scrollbar-thumb {
-//     background: rgb(122, 20, 20);
-//     border-radius: 4px;
-// }
+body::-webkit-scrollbar-thumb {
+    background-color: blue;
+    // border-radius: 20px;
+    // border: 3px solid orange;
+  }
 
-// /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
-// ::-webkit-scrollbar-thumb:hover {
-//     background: #852323;
-//     box-shadow: 0 0 2px 1px rgba(159, 30, 30, 0.2);
-// }
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
 
-// /* Cambiamos el fondo cuando esté en active */
-// ::-webkit-scrollbar-thumb:active {
-//     background-color: #430f0f;
-// }
+body::-webkit-scrollbar:hover {
+    background: #852323;
+    box-shadow: 0 0 2px 1px rgba(159, 30, 30, 0.2);
+    position: relative;
+}
+
+/* Cambiamos el fondo cuando esté en active */
+
+body::-webkit-scrollbar:active {
+    background-color: #430f0f;
+}
+
+
 
 
 
@@ -55,6 +67,10 @@ header {
     justify-content: space-around;
     background-color: #ffff;
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
 
     .logo {
         svg {
@@ -126,6 +142,7 @@ header {
     height: calc(100vh - 116px);
     width: 100%;
     display: flex;
+    z-index: 99999;
 
     .dere {
         height: 100%;
@@ -174,6 +191,7 @@ header {
     height: calc(100vh - 116px);
     width: 100%;
     display: flex;
+    z-index: 99999;
 
     .titulo {
         height: 100%;
@@ -235,7 +253,7 @@ header {
     width: 100%;
     background-color: $base-color;
     display: flex;
-
+    z-index: 99999;
 
     .conte {
         height: 100%;
@@ -270,6 +288,7 @@ header {
     width: 100%;
     background-color: $base-color;
     display: flex;
+    z-index: 99999;
 
     .nuestros {
         height: 100%;

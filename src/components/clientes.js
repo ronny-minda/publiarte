@@ -2,7 +2,6 @@ import react, { useState } from "react";
 import { motion } from "framer-motion";
 
 const Clientes = () => {
-
   const [animacion, setAminacion] = useState({});
   const [salle, setSalle] = useState({});
   const [CTO, setCTO] = useState({});
@@ -42,9 +41,17 @@ const Clientes = () => {
       amount: 0.4,
     },
     onViewportEnter: () =>
-      setSalle({ transform: "translate(0px, 0px)", opacity: 1 }),
+      setSalle({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 0.2, duration: 1.5, bounce: 0 },
+      }),
     onViewportLeave: () =>
-      setSalle({ transform: "translate(50px, 0px)", opacity: 0 }),
+      setSalle({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
   };
 
   const LACTO = {
@@ -59,9 +66,17 @@ const Clientes = () => {
       amount: 0.4,
     },
     onViewportEnter: () =>
-      setCTO({ transform: "translate(0px, 0px)", opacity: 1 }),
+      setCTO({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 0.4, duration: 1.5, bounce: 0 },
+      }),
     onViewportLeave: () =>
-      setCTO({ transform: "translate(50px, 0px)", opacity: 0 }),
+      setCTO({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
   };
 
   const LAcasa = {
@@ -76,9 +91,17 @@ const Clientes = () => {
       amount: 0.4,
     },
     onViewportEnter: () =>
-      setcasa({ transform: "translate(0px, 0px)", opacity: 1 }),
+      setcasa({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 0.6, duration: 1.5, bounce: 0 },
+      }),
     onViewportLeave: () =>
-      setcasa({ transform: "translate(50px, 0px)", opacity: 0 }),
+      setcasa({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
   };
 
   const LAFacso = {
@@ -93,9 +116,17 @@ const Clientes = () => {
       amount: 0.4,
     },
     onViewportEnter: () =>
-      setFacso({ transform: "translate(0px, 0px)", opacity: 1 }),
+      setFacso({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 0.8, duration: 1.5, bounce: 0 },
+      }),
     onViewportLeave: () =>
-      setFacso({ transform: "translate(50px, 0px)", opacity: 0 }),
+      setFacso({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
   };
 
   const LAnails = {
@@ -110,9 +141,18 @@ const Clientes = () => {
       amount: 0.4,
     },
     onViewportEnter: () =>
-      setnails({ transform: "translate(0px, 0px)", opacity: 1 }),
+      setnails({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 1, duration: 1.5, bounce: 0 },
+      }),
+    //   duration: 1.5
     onViewportLeave: () =>
-      setnails({ transform: "translate(50px, 0px)", opacity: 0 }),
+      setnails({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 1.2, duration: 0.1, bounce: 0 },
+      }),
   };
 
   const LAmedia = {
@@ -127,9 +167,17 @@ const Clientes = () => {
       amount: 0.4,
     },
     onViewportEnter: () =>
-      setmedia({ transform: "translate(0px, 0px)", opacity: 1 }),
+      setmedia({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 1.4, duration: 1.5, bounce: 0 },
+      }),
     onViewportLeave: () =>
-      setmedia({ transform: "translate(50px, 0px)", opacity: 0 }),
+      setmedia({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
   };
 
   const LAbobcat = {
@@ -144,9 +192,17 @@ const Clientes = () => {
       amount: 0.4,
     },
     onViewportEnter: () =>
-      setbobcat({ transform: "translate(0px, 0px)", opacity: 1 }),
+      setbobcat({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 1, duration: 1.5, bounce: 0 },
+      }),
     onViewportLeave: () =>
-      setbobcat({ transform: "translate(50px, 0px)", opacity: 0 }),
+      setbobcat({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
   };
 
   return (
@@ -154,13 +210,72 @@ const Clientes = () => {
       <section className="clientes">
         <motion.div {...animation} className="nuestros"></motion.div>
         <div className="cliente">
-          <motion.div {...LAsalle} transition = {{type: "spring", delay: 0.2 , duration: 1.5, bounce: 0}} className="laSalle"></motion.div>
-          <motion.div {...LACTO} transition = {{type: "spring", delay: 0.4 , duration: 1.5, bounce: 0}} className="CTO"></motion.div>
-          <motion.div {...LAcasa} transition = {{type: "spring", delay: 0.6 , duration: 1.5, bounce: 0}} className="casa"></motion.div>
-          <motion.div {...LAFacso} transition = {{type: "spring", delay: 0.8 , duration: 1.5, bounce: 0}} className="Facso"></motion.div>
-          <motion.div {...LAnails} transition = {{type: "spring", delay: 1 , duration: 1.5, bounce: 0}} className="nails"></motion.div>
-          <motion.div {...LAmedia} transition = {{type: "spring", delay: 1.2 , duration: 1.5, bounce: 0}} className="media"></motion.div>
-          <motion.div {...LAbobcat} transition = {{type: "spring", delay: 1.4 , duration: 1.5, bounce: 0}} className="bobcat"></motion.div>
+          <motion.div
+            {...LAsalle}
+            // transition={{
+            //   type: "spring",
+            //   delay: 0.2,
+            //   duration: 1.5,
+            //   bounce: 0,
+            // }}
+
+            className="laSalle"
+          ></motion.div>
+          <motion.div
+            {...LACTO}
+            // transition={{
+            //   type: "spring",
+            //   delay: 0.4,
+            //   duration: 1.5,
+            //   bounce: 0,
+            // }}
+            className="CTO"
+          ></motion.div>
+          <motion.div
+            {...LAcasa}
+            // transition={{
+            //   type: "spring",
+            //   delay: 0.6,
+            //   duration: 1.5,
+            //   bounce: 0,
+            // }}
+            className="casa"
+          ></motion.div>
+          <motion.div
+            {...LAFacso}
+            // transition={{
+            //   type: "spring",
+            //   delay: 0.8,
+            //   duration: 1.5,
+            //   bounce: 0,
+            // }}
+            className="Facso"
+          ></motion.div>
+          <motion.div
+            {...LAnails}
+            // transition={{ type: "spring", delay: 1, duration: 1.5, bounce: 0 }}
+            className="nails"
+          ></motion.div>
+          <motion.div
+            {...LAmedia}
+            // transition={{
+            //   type: "spring",
+            //   delay: 1.2,
+            //   duration: 1.5,
+            //   bounce: 0,
+            // }}
+            className="media"
+          ></motion.div>
+          <motion.div
+            {...LAbobcat}
+            // transition={{
+            //   type: "spring",
+            //   delay: 1.4,
+            //   duration: 1.5,
+            //   bounce: 0,
+            // }}
+            className="bobcat"
+          ></motion.div>
         </div>
       </section>
     </>

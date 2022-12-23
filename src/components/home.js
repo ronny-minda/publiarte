@@ -24,8 +24,8 @@ const Home = () => {
 
   return (
     <>
-      <section  className="home">
-        <motion.div {...animation}  className="dere"></motion.div>
+      <section className="home">
+        <motion.div {...animation} className="dere"></motion.div>
         <motion.div {...animation} className="izqui">
           <div className="logoHome"></div>
         </motion.div>

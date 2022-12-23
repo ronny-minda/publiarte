@@ -52,7 +52,7 @@ const Index = () => {
           rel="stylesheet"
         ></link>
       </Head>
-      <motion.main>
+      <motion.main style={{ position: "absolute" }}>
         <Header scroll={scroll} />
         <Home scroll={scroll} />
         <QuienesSomos scroll={scroll} />
