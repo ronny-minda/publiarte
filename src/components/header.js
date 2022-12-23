@@ -17,33 +17,33 @@ const Header = () => {
       </div>
       <nav>
         <li>
-          <a href="#" onClick={(e) => despla(e, 0)}>
+          <a href="" onClick={(e) => despla(e, 0)}>
             INICIO
           </a>
         </li>
         <li>
-          <a href="#" onClick={(e) => despla(e, 870)}>
+          <a href="" onClick={(e) => despla(e, 870)}>
             NOSOTROS
           </a>
         </li>
         <li>
-          <a href="#" onClick={(e) => despla(e, 1730)}>
+          <a href="" onClick={(e) => despla(e, 1730)}>
             EQUIPO
           </a>
         </li>
         <li>
-          <a href="#" onClick={(e) => despla(e, 3000)}>
+          <a href="" onClick={(e) => despla(e, 3000)}>
             CLIENTE
           </a>
         </li>
         <li>
-          <a href="#" onClick={(e) => despla(e, 0)}>
+          <a href="" onClick={(e) => despla(e, 0)}>
             PORAFFOLIO
           </a>
         </li>
       </nav>
       <div className="cotizar">
-        <a href="#"> COTIZAR </a>
+        <a href=""> COTIZAR </a>
       </div>
     </header>
   );

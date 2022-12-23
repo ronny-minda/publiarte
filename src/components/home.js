@@ -25,8 +25,16 @@ const Home = () => {
   return (
     <>
       <section className="home">
-        <motion.div {...animation} className="dere"></motion.div>
-        <motion.div {...animation} className="izqui">
+        <motion.div
+          initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
+          {...animation}
+          className="dere"
+        ></motion.div>
+        <motion.div
+          initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
+          {...animation}
+          className="izqui"
+        >
           <div className="logoHome"></div>
         </motion.div>
       </section>

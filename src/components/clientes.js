@@ -151,7 +151,7 @@ const Clientes = () => {
       setnails({
         transform: "translate(50px, 0px)",
         opacity: 0,
-        transition: { type: "spring", delay: 1.2, duration: 0.1, bounce: 0 },
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
       }),
   };
 
@@ -195,7 +195,7 @@ const Clientes = () => {
       setbobcat({
         transform: "translate(0px, 0px)",
         opacity: 1,
-        transition: { type: "spring", delay: 1, duration: 1.5, bounce: 0 },
+        transition: { type: "spring", delay: 1.6, duration: 1.5, bounce: 0 },
       }),
     onViewportLeave: () =>
       setbobcat({
@@ -208,72 +208,45 @@ const Clientes = () => {
   return (
     <>
       <section className="clientes">
-        <motion.div {...animation} className="nuestros"></motion.div>
+        <motion.div
+          initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
+          {...animation}
+          className="nuestros"
+        ></motion.div>
         <div className="cliente">
           <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
             {...LAsalle}
-            // transition={{
-            //   type: "spring",
-            //   delay: 0.2,
-            //   duration: 1.5,
-            //   bounce: 0,
-            // }}
-
             className="laSalle"
           ></motion.div>
           <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
             {...LACTO}
-            // transition={{
-            //   type: "spring",
-            //   delay: 0.4,
-            //   duration: 1.5,
-            //   bounce: 0,
-            // }}
             className="CTO"
           ></motion.div>
           <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
             {...LAcasa}
-            // transition={{
-            //   type: "spring",
-            //   delay: 0.6,
-            //   duration: 1.5,
-            //   bounce: 0,
-            // }}
             className="casa"
           ></motion.div>
           <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
             {...LAFacso}
-            // transition={{
-            //   type: "spring",
-            //   delay: 0.8,
-            //   duration: 1.5,
-            //   bounce: 0,
-            // }}
             className="Facso"
           ></motion.div>
           <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
             {...LAnails}
-            // transition={{ type: "spring", delay: 1, duration: 1.5, bounce: 0 }}
             className="nails"
           ></motion.div>
           <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
             {...LAmedia}
-            // transition={{
-            //   type: "spring",
-            //   delay: 1.2,
-            //   duration: 1.5,
-            //   bounce: 0,
-            // }}
             className="media"
           ></motion.div>
           <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
             {...LAbobcat}
-            // transition={{
-            //   type: "spring",
-            //   delay: 1.4,
-            //   duration: 1.5,
-            //   bounce: 0,
-            // }}
             className="bobcat"
           ></motion.div>
         </div>

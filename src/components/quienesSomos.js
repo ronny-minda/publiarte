@@ -25,8 +25,16 @@ const QuienesSomos = () => {
   return (
     <>
       <section className="quienesSomos">
-        <motion.div {...animation} className="titulo"></motion.div>
-        <motion.div {...animation} className="texto">
+        <motion.div
+          initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
+          {...animation}
+          className="titulo"
+        ></motion.div>
+        <motion.div
+          initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
+          {...animation}
+          className="texto"
+        >
           <div>
             <p>
               PubliArte es una empresa conformada por familia y amigos, llevamos

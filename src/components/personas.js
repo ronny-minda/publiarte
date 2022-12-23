@@ -26,7 +26,10 @@ const Personas = () => {
     <>
       <section className="personas">
         <div className="conte">
-          <motion.div {...animation}>
+          <motion.div
+            initial={{ transform: "translate(0px, -300px)", opacity: 0 }}
+            {...animation}
+          >
             <h2>DAVID STRASSER</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -35,7 +38,10 @@ const Personas = () => {
           </motion.div>
         </div>
         <div className="conte">
-          <motion.div {...animation}>
+          <motion.div
+            initial={{ transform: "translate(0px, -300px)", opacity: 0 }}
+            {...animation}
+          >
             <h2>ELIHU STRASSER</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -44,7 +50,10 @@ const Personas = () => {
           </motion.div>
         </div>
         <div className="conte">
-          <motion.div {...animation}>
+          <motion.div
+            initial={{ transform: "translate(0px, -300px)", opacity: 0 }}
+            {...animation}
+          >
             <h2>RONNY MINDA</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
