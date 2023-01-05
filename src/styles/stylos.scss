@@ -10,7 +10,7 @@ $base-color: #C22428;
 }
 
 body {
-    background-color: #00fc22;
+    // background-color: #00fc22;
     // overflow-y: hidden;
     // transform: translate(3px, -15px);
 }
@@ -151,18 +151,38 @@ header {
     }
 
     .izqui {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         height: 100%;
         width: 70%;
         background-color: #fff;
         display: flex;
+        // box-shadow: inset 0px -18px 0px 0px $base-color;
+        background: linear-gradient(180deg, #fff calc(100% - 0.4px), $base-color calc(100% - 0.4px));
 
-        background-image: url(../svg/logoEstatico.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: left;
         position: relative;
         height: 100%;
 
+        // .aux {
+        //     height: 100px;
+        //     width: 100%;
+        //     background-color: $base-color;
+        //     position: absolute;
+        //     bottom: 0;
+        //     right: 0;
+        //     z-index: 5;
+        // }
+
+        .fondo {
+            background-image: url(../svg/logoEstatico.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+            height: 100%;
+            width: 100%;
+            // background-color: #000;
+            position: absolute;
+            z-index: 10;
+        }
 
         .logoHome {
             background-image: url(../svg/logo.svg);
@@ -174,6 +194,7 @@ header {
             bottom: 100px;
             height: 100px;
             width: 280px;
+            z-index: 15;
             // background-color: #c2b0b1;
         }
 
@@ -187,6 +208,7 @@ header {
 }
 
 .quienesSomos {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     background-color: $base-color;
     height: calc(100vh - 116px);
     width: 100%;
@@ -249,6 +271,7 @@ header {
 }
 
 .personas {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     height: calc(100vh - 116px);
     width: 100%;
     background-color: $base-color;
@@ -284,6 +307,7 @@ header {
 }
 
 .clientes {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     height: calc(100vh - 116px);
     width: 100%;
     background-color: $base-color;
@@ -339,6 +363,25 @@ header {
         }
         .bobcat {
             background-image: url(../svg/bobcat.svg);
+        }
+
+        .umet {
+            background-image: url(../svg/umet.svg);
+        }
+        .eco {
+            background-image: url(../svg/eco.svg);
+        }
+        .fede {
+            background-image: url(../svg/fede.svg);
+        }
+        .ryc {
+            background-image: url(../svg/ryc.svg);
+        }
+        .uni {
+            background-image: url(../svg/uni.svg);
+        }
+        .lion {
+            background-image: url(../svg/lion.svg);
         }
     }
 }

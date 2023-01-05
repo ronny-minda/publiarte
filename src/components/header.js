@@ -38,7 +38,7 @@ const Header = () => {
         </li>
         <li>
           <a href="" onClick={(e) => despla(e, 0)}>
-            PORAFFOLIO
+            PORTAFOLIO
           </a>
         </li>
       </nav>

@@ -11,6 +11,13 @@ const Clientes = () => {
   const [media, setmedia] = useState({});
   const [bobcat, setbobcat] = useState({});
 
+  const [umet, setumet] = useState({});
+  const [eco, seteco] = useState({});
+  const [fede, setfede] = useState({});
+  const [ryc, setryc] = useState({});
+  const [uni, setuni] = useState({});
+  const [lion, setlion] = useState({});
+
   const animation = {
     variants: {
       hidden: animacion,
@@ -205,6 +212,156 @@ const Clientes = () => {
       }),
   };
 
+  const LAumet = {
+    variants: {
+      hidden: umet,
+      visible: { opacity: 1 },
+      slideStart: { opacity: 0 },
+      slideEnd: { opacity: 1 },
+    },
+    animate: ["hidden"],
+    viewport: {
+      amount: 0.4,
+    },
+    onViewportEnter: () =>
+      setumet({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 1.8, duration: 1.5, bounce: 0 },
+      }),
+    onViewportLeave: () =>
+      setumet({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
+  };
+
+  const LAeco = {
+    variants: {
+      hidden: eco,
+      visible: { opacity: 1 },
+      slideStart: { opacity: 0 },
+      slideEnd: { opacity: 1 },
+    },
+    animate: ["hidden"],
+    viewport: {
+      amount: 0.4,
+    },
+    onViewportEnter: () =>
+      seteco({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 2, duration: 1.5, bounce: 0 },
+      }),
+    onViewportLeave: () =>
+      seteco({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
+  };
+
+  const LAfede = {
+    variants: {
+      hidden: fede,
+      visible: { opacity: 1 },
+      slideStart: { opacity: 0 },
+      slideEnd: { opacity: 1 },
+    },
+    animate: ["hidden"],
+    viewport: {
+      amount: 0.4,
+    },
+    onViewportEnter: () =>
+      setfede({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 2.2, duration: 1.5, bounce: 0 },
+      }),
+    onViewportLeave: () =>
+      setfede({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
+  };
+
+  const LAryc = {
+    variants: {
+      hidden: ryc,
+      visible: { opacity: 1 },
+      slideStart: { opacity: 0 },
+      slideEnd: { opacity: 1 },
+    },
+    animate: ["hidden"],
+    viewport: {
+      amount: 0.4,
+    },
+    onViewportEnter: () =>
+      setryc({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 2.4, duration: 1.5, bounce: 0 },
+      }),
+    onViewportLeave: () =>
+      setryc({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
+  };
+
+  const LAuni = {
+    variants: {
+      hidden: uni,
+      visible: { opacity: 1 },
+      slideStart: { opacity: 0 },
+      slideEnd: { opacity: 1 },
+    },
+    animate: ["hidden"],
+    viewport: {
+      amount: 0.4,
+    },
+    onViewportEnter: () =>
+      setuni({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 2.6, duration: 1.5, bounce: 0 },
+      }),
+    onViewportLeave: () =>
+      setuni({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
+  };
+
+  const LAlion = {
+    variants: {
+      hidden: lion,
+      visible: { opacity: 1 },
+      slideStart: { opacity: 0 },
+      slideEnd: { opacity: 1 },
+    },
+    animate: ["hidden"],
+    viewport: {
+      amount: 0.4,
+    },
+    onViewportEnter: () =>
+      setlion({
+        transform: "translate(0px, 0px)",
+        opacity: 1,
+        transition: { type: "spring", delay: 2.8, duration: 1.5, bounce: 0 },
+      }),
+    onViewportLeave: () =>
+      setlion({
+        transform: "translate(50px, 0px)",
+        opacity: 0,
+        transition: { type: "spring", delay: 0, duration: 0.1, bounce: 0 },
+      }),
+  };
+
   return (
     <>
       <section className="clientes">
@@ -248,6 +405,37 @@ const Clientes = () => {
             initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
             {...LAbobcat}
             className="bobcat"
+          ></motion.div>
+
+          <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
+            {...LAumet}
+            className="umet"
+          ></motion.div>
+          <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
+            {...LAeco}
+            className="eco"
+          ></motion.div>
+          <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
+            {...LAfede}
+            className="fede"
+          ></motion.div>
+          <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
+            {...LAryc}
+            className="ryc"
+          ></motion.div>
+          <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
+            {...LAuni}
+            className="uni"
+          ></motion.div>
+          <motion.div
+            initial={{ transform: "translate(50px, 0px)", opacity: 0 }}
+            {...LAlion}
+            className="lion"
           ></motion.div>
         </div>
       </section>

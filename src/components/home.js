@@ -35,6 +35,8 @@ const Home = () => {
           {...animation}
           className="izqui"
         >
+          {/* <div className="aux"></div> */}
+          <div className="fondo"></div>
           <div className="logoHome"></div>
         </motion.div>
       </section>
