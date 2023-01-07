@@ -365,6 +365,7 @@ const Clientes = () => {
   return (
     <>
       <section className="clientes">
+        <h2 className="tituloAcual">NUESTROS CLIENTES</h2>
         <motion.div
           initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
           {...animation}

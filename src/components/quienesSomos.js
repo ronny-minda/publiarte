@@ -1,5 +1,6 @@
 import react, { useState } from "react";
 import { motion } from "framer-motion";
+import Deco2 from "../svg/decoracion/Deco2";
 
 const QuienesSomos = () => {
   const [animacion, setAminacion] = useState({});
@@ -25,6 +26,10 @@ const QuienesSomos = () => {
   return (
     <>
       <section className="quienesSomos">
+        <h2 className="tituloMobil">QUIENES SOMOS</h2>
+
+        <Deco2 />
+
         <motion.div
           initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
           {...animation}

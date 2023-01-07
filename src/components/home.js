@@ -1,49 +1,113 @@
 import react, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+import Web from "./web";
+import Diseno from "./diseno";
+import Fotos from "./fotos";
+import Flecha from "../svg/flecha";
 
 const Home = () => {
-  const [animacion, setAminacion] = useState({});
+  const [carrusel, setCarrusel] = useState({
+    fotos: true,
+    diseno: false,
+    web: false,
+  });
 
-  const animation = {
-    variants: {
-      hidden: animacion,
-      visible: { opacity: 1 },
-      slideStart: { opacity: 0 },
-      slideEnd: { opacity: 1 },
-    },
-    animate: ["hidden"],
-    viewport: {
-      amount: 0.4,
-    },
-    onViewportEnter: () =>
-      setAminacion({ transform: "translate(0px, 0px)", opacity: 1 }),
-    onViewportLeave: () =>
-      setAminacion({ transform: "translate(0px, -200px)", opacity: 0 }),
-    transition: { type: "spring", duration: 1.5, bounce: 0 },
+  const [orien, setOrien] = useState(true);
+
+  const adelante = () => {
+    setOrien(true);
+    console.log("adelante");
+
+    // fotos => diseno
+    // diseno => web
+    // web => fotos
+
+    if (carrusel.fotos === true) {
+      setCarrusel({
+        ...carrusel,
+        fotos: false,
+        diseno: true,
+        web: false,
+      });
+    }
+    if (carrusel.diseno === true) {
+      setCarrusel({
+        ...carrusel,
+        fotos: false,
+        diseno: false,
+        web: true,
+      });
+    }
+    if (carrusel.web === true) {
+      setCarrusel({
+        ...carrusel,
+        fotos: true,
+        diseno: false,
+        web: false,
+      });
+    }
+  };
+
+  const atras = () => {
+    setOrien(false);
+    console.log("atras");
+
+    // fotos <= diseno
+    // diseno <= web
+    // web <= fotos
+
+    if (carrusel.fotos === true) {
+      setCarrusel({
+        ...carrusel,
+        fotos: false,
+        diseno: false,
+        web: true,
+      });
+    }
+    if (carrusel.diseno === true) {
+      setCarrusel({
+        ...carrusel,
+        fotos: true,
+        diseno: false,
+        web: false,
+      });
+    }
+    if (carrusel.web === true) {
+      setCarrusel({
+        ...carrusel,
+        fotos: false,
+        diseno: true,
+        web: false,
+      });
+    }
   };
 
   return (
     <>
       <section className="home">
-        <motion.div
-          initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
-          {...animation}
-          className="dere"
-        ></motion.div>
-        <motion.div
-          initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
-          {...animation}
-          className="izqui"
-        >
-          {/* <div className="aux"></div> */}
-          <div className="fondo"></div>
-          <div className="logoHome"></div>
-        </motion.div>
+        <div className="flechaIsqui" onClick={() => atras()}>
+          <Flecha
+            style={{
+              transform: "rotateY(180deg)",
+            }}
+          />
+        </div>
+        <AnimatePresence>
+          {carrusel.fotos && <Fotos orientacion={orien} />}
+        </AnimatePresence>
+        <AnimatePresence>
+          {carrusel.web && <Web orientacion={orien} />}
+        </AnimatePresence>
+        <AnimatePresence>
+          {carrusel.diseno && <Diseno orientacion={orien} />}
+        </AnimatePresence>
+        <div className="flechaDere" onClick={() => adelante()}>
+          <Flecha />
+        </div>
       </section>
     </>
   );
 };
 
 export default Home;
-
-// https://codesandbox.io/s/framer-motion-scroll-triggered-animation-whileinview-d7tduv?from-embed=&file=/src/App.tsx
