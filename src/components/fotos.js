@@ -59,8 +59,8 @@ const Fotos = ({ orientacion }) => {
             src={image}
             initial={{
               opacity: 1,
-              x: 1300,
-              z: -1000,
+              x: 1000,
+              z: -100,
               rotateY: 80,
               rotateZ: -0,
               rotateX: -0,
@@ -77,8 +77,8 @@ const Fotos = ({ orientacion }) => {
             }}
             exit={{
               opacity: 1,
-              x: -1300,
-              z: -1000,
+              x: -1000,
+              z: -100,
               rotateY: -80,
               rotateZ: -0,
               rotateX: -0,
@@ -87,11 +87,11 @@ const Fotos = ({ orientacion }) => {
             transition={{ duration: 2 }}
           />
         </AnimatePresence>
-        <motion.div
+        {/* <motion.div
           // initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
           // {...animation}
           className="dere"
-        ></motion.div>
+        ></motion.div> */}
         <motion.div
           // initial={{ transform: "translate(0px, -200px)", opacity: 0 }}
           // {...animation}

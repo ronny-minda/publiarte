@@ -40,20 +40,26 @@ const Footer = () => {
             <div className="ani"></div>
           </li>
           <li>
-            <a href="" onClick={(e) => despla(e, 1730)}>
+            <a href="" onClick={(e) => despla(e, 1570)}>
               EQUIPO
             </a>
             <div className="ani"></div>
           </li>
           <li>
-            <a href="" onClick={(e) => despla(e, 3000)}>
+            <a href="" onClick={(e) => despla(e, 2435)}>
               CLIENTE
             </a>
             <div className="ani"></div>
           </li>
           <li>
-            <a href="" onClick={(e) => despla(e, 0)}>
+            <a href="" onClick={(e) => despla(e, 3300)}>
               PORTAFOLIO
+            </a>
+            <div className="ani"></div>
+          </li>
+          <li>
+            <a href="" onClick={(e) => despla(e, 5000)}>
+              CONTACTO
             </a>
             <div className="ani"></div>
           </li>
@@ -68,6 +74,9 @@ const Footer = () => {
             COTIZAR
           </a>
         </div>
+      </div>
+      <div className="copy">
+        <span> © Copyright - 2023 </span>
       </div>
     </footer>
   );

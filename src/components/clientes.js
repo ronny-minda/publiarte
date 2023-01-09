@@ -1,5 +1,6 @@
 import react, { useState } from "react";
 import { motion } from "framer-motion";
+import FondoClientes from "../svg/fondo/fondoClientes";
 
 const Clientes = () => {
   const [animacion, setAminacion] = useState({});
@@ -439,6 +440,8 @@ const Clientes = () => {
             className="lion"
           ></motion.div>
         </div>
+
+        <FondoClientes className="fondoNosotros" />
       </section>
     </>
   );

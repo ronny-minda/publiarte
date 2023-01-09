@@ -86,13 +86,13 @@ const Home = () => {
   return (
     <>
       <section className="home">
-        <div className="flechaIsqui" onClick={() => atras()}>
+        {/* <div className="flechaIsqui" onClick={() => atras()}>
           <Flecha
             style={{
               transform: "rotateY(180deg)",
             }}
           />
-        </div>
+        </div> */}
         <AnimatePresence>
           {carrusel.fotos && <Fotos orientacion={orien} />}
         </AnimatePresence>
@@ -102,9 +102,9 @@ const Home = () => {
         <AnimatePresence>
           {carrusel.diseno && <Diseno orientacion={orien} />}
         </AnimatePresence>
-        <div className="flechaDere" onClick={() => adelante()}>
+        {/* <div className="flechaDere" onClick={() => adelante()}>
           <Flecha />
-        </div>
+        </div> */}
       </section>
     </>
   );
