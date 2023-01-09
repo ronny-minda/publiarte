@@ -49,7 +49,7 @@ const Index = () => {
 
         <a
           className="whatsApp"
-          href="https://api.whatsapp.com/send?phone=593993105654&text=Hola, Nececito mas informacion!"
+          href="https://api.whatsapp.com/send?phone=593999962675&text=Hola, Nececito mas informacion!"
           target="_blank"
           rel="noopener noreferrer"
         >
